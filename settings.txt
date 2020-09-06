@@ -1,0 +1,8 @@
+"main": "./dist/smyld3d.umd.min.js",
+"unpkg": "./dist/smyld3d.common.js",
+
+
+vue-cli-service.cmd build --target wc --inline-vue  --name smyld-box src/components/Box.vue
+vue-cli-service.cmd build --target wc --inline-vue  --name smyld-lib-3d src/components/*.vue
+npm publish --access public
+npm login

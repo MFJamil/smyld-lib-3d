@@ -1,0 +1,92 @@
+{
+  "name": "smyld-lib-3d",
+  "version": "0.1.41",
+  "private": false,
+  "main": "./dist/smyld3d.common.js",
+  "module": "./dist/smyld3d.esm.js",
+  "unpkg": "./dist/smyld3d.umd.js",
+  "browser": {
+    "./sfc": "src/smyld3d.vue"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "lint": "vue-cli-service lint",
+    "build": "vue-cli-service build",
+    "build-lib": "vue-cli-service build --target lib --name smyld3d src/main.js",
+    "build-big-lib": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/smyld3d.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/smyld3d.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/smyld3d.min.js",
+    "test:unit": "jest"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^8.5.1",
+    "typescript": "~3.9.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "^4.4.6",
+    "@vue/cli-plugin-typescript": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "@vue/test-utils": "^1.0.4",
+    "@vue/web-component-wrapper": "^1.2.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.12.0",
+    "rollup": "^1.17.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-vue": "^5.0.1",
+    "sass-loader": "^8.0.2",
+    "ts-jest": "^26.2.0",
+    "vue-jest": "^3.0.6",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/typescript/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {}
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest"
+    },
+    "testURL": "http://localhost/"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "build/*",
+    "*.json",
+    "*.js"
+  ],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

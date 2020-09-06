@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Testing SMYLD Lib 3D</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+	<script src="https://cdn.jsdelivr.net/npm/smyld-lib-3d@0.1.36/dist/smyld-lib-3d.min.js"></script>
+</head>
+<body>
+    <smyld-lib-3d-box settings="width:400px;height: 200px;length:150px;bg-front:red;">
+        <div slot="front" style="color: blue;">
+            Mudy1
+        </div>
+        <div slot="right" >
+            Dini
+        </div>
+
+    </smyld-lib-3d-box>
+	<smyld-lib-3d-qube settings="width:300;height: 400;length:150;" show="back" >
+      <div slot="front" style="padding-top:30px;" >Front</div>
+      <div slot="right" style="padding-top:30px;">Right</div>
+      <div slot="left" style="padding-top:30px;">Left</div>
+      <div slot="back" style="padding-top:30px;">Back</div>
+      <div slot="top" style="padding-top:30px;">Top</div>
+      <div slot="bottom" style="padding-top:30px;">Bottom</div>
+
+    </smyld-lib-3d-qube>	
+</body>
+</html>
