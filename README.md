@@ -31,7 +31,7 @@ the following code will define the component in your page, below is sample for c
         </div>
     </smyld-lib-3d-box>
 ```
-Below is the code for creating the Qube (which inhibits more features compared to the box):
+Below is the code for creating the Qube (which inlcudes more features compared to the box):
 
 ```xml
 <smyld-lib-3d-qube settings="width:300;height: 400;length:150;" show="back" >
