@@ -41,7 +41,7 @@ Below is the code for creating the Qube (which inlcudes more features compared t
       <div slot="back" style="padding-top:30px;">Back</div>
       <div slot="top" style="padding-top:30px;">Top</div>
       <div slot="bottom" style="padding-top:30px;">Bottom</div>
-
+</smyld-lib-3d-qube>
 ```
  ![ToContinue](docs/svg/toContinue.svg)
 
