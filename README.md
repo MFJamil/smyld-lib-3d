@@ -1,7 +1,7 @@
 [![](https://data.jsdelivr.com/v1/package/npm/smyld-lib-3d/badge)](https://www.jsdelivr.com/package/npm/smyld-lib-3d)
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://github.com/MFjamil/smyld-lib-3d/blob/master/LICENSE)
 [<img src="docs/npm_badge.svg">](https://www.npmjs.com/package/smyld-lib-3d)
-![](https://sky-feline-sulfur.glitch.me?application)
+![](https://sky-feline-sulfur.glitch.me?SMYLD%20MD%20Lib%20Styling)
 
 
 # SMYLD 3d Components Web Library 
