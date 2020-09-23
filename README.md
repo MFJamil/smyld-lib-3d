@@ -1,7 +1,7 @@
 [![](https://data.jsdelivr.com/v1/package/npm/smyld-lib-3d/badge)](https://www.jsdelivr.com/package/npm/smyld-lib-3d)
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://github.com/MFjamil/smyld-lib-3d/blob/master/LICENSE)
 [<img src="docs/npm_badge.svg">](https://www.npmjs.com/package/smyld-lib-3d)
-![](https://sky-feline-sulfur.glitch.me?SMYLD%20MD%20Lib%20Styling)
+
 
 
 # SMYLD 3d Components Web Library 
@@ -45,9 +45,8 @@ Below is the code for creating the Qube (which inlcudes more features compared t
       <div slot="bottom" style="padding-top:30px;">Bottom</div>
 </smyld-lib-3d-qube>
 ```
-```diff
-- Known Issues
-```
+![](https://sky-feline-sulfur.glitch.me?Known%20Issues)
+
  ![To be Continuetewerw](docs/svg/toContinue.svg)
 
 
