@@ -14,6 +14,10 @@ Below is a sample out of the [smyld.org](http://www.smyld.org)  website itself, 
 ![Library Box usage - from smyld.org site](docs/smyld_page_sample_box_1.png)
 
 
+
+![Library Box usage - from smyld.org site](docs/smyld-lib-3d_demo.gif)
+
+
 ## Usage
 ### For Web Site designers
 add the link of the library to your webpage :
