@@ -15,7 +15,7 @@ Below is a sample out of the [smyld.org](http://www.smyld.org)  website itself, 
 
 
 
-![Library Box usage - from smyld.org site](docs/smyld-lib-3d_demo.gif)
+
 
 
 ## Usage
@@ -49,6 +49,9 @@ Below is the code for creating the Qube (which inlcudes more features compared t
       <div slot="bottom" style="padding-top:30px;">Bottom</div>
 </smyld-lib-3d-qube>
 ```
+![Library Box usage - from smyld.org site](docs/smyld-lib-3d_demo.gif)
+
+
 ![](https://sky-feline-sulfur.glitch.me?Known%20Issues)
 
  ![To be Continuetewerw](docs/svg/toContinue.svg)
