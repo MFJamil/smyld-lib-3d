@@ -1,10 +1,16 @@
 {
   "name": "smyld-lib-3d",
-  "version": "0.1.41",
+  "version": "1.0.42",
+  "description": "SMYLD Javascript Library, holding Vue 3D components",
   "private": false,
   "main": "./dist/smyld3d.common.js",
   "module": "./dist/smyld3d.esm.js",
   "unpkg": "./dist/smyld3d.umd.js",
+  "homepage": "https://github.com/MFJamil/smyld-lib-3d#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MFJamil/smyld-lib-3d.git"
+  },
   "browser": {
     "./sfc": "src/smyld3d.vue"
   },

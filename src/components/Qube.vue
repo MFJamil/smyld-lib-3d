@@ -79,6 +79,7 @@ export default class Qube extends Vue {
 
 
     public openLink(): void{
+        if ((this.target===undefined) ||(this.target!=="")) return;
         console.log(this.target);
         this.leftFace.classList.add( "selectedLink" );
         window.location.href = this.target;
