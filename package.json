@@ -1,0 +1,32 @@
+{
+  "name": "smyld-lib-3d",
+  "version": "1.0.43",
+  "description": "SMYLD Javascript Library, holding Vue 3D components",
+  "private": false,
+  "main": "./dist/smyld3d.common.js",
+  "module": "./dist/smyld3d.esm.js",
+  "unpkg": "./dist/smyld3d.umd.js",
+  "homepage": "https://github.com/MFJamil/smyld-lib-3d#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MFJamil/smyld-lib-3d.git"
+  },
+"type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.31"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4",
+    "vue-tsc": "^2.0.24"
+  }
+}
