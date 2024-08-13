@@ -52,7 +52,8 @@ import { onMounted, ref } from 'vue';
   })
 
   const parseSettings = ()=>{
-      const tokens: string[] = props.settings?.split(';');
+      const tokens: string[]|undefined = props.settings?.split(';');
+      if (tokens==undefined) return;
       console.log(tokens);
       for (const fld in tokens){
         const fields = tokens[fld].split(':');
