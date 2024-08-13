@@ -1,6 +1,6 @@
 <template>
-    <div class="scene" v-bind="$attrs"  @mousedown="openLink()" >
-        <div ref="mainqube" class="qube" @mouseover="doMove" @mouseout="getback" >
+    <div class="scene" v-bind="$attrs"  @mousedown="doOpenLink()" >
+        <div ref="mainqube" class="qube" @mouseover="doMove" @mouseout="getback"  @touchstart="doMove" @touchend="getback">
             <div class="qube__face qube__face--front"><slot name="front"></slot></div>
             <div class="qube__face qube__face--back"><slot name="back"></slot></div>
             <div  ref="linkFace" class="qube__face qube__face--right"><slot name="right"></slot></div>
@@ -31,6 +31,10 @@ import { onMounted, ref } from 'vue';
       type: String,
       default: 'right'
     },
+    openLink:{
+      type: Boolean,
+      default: true
+    }
   })
 
   const curFace = ref("show-front");
@@ -82,11 +86,11 @@ import { onMounted, ref } from 'vue';
     }
 
 
-    const openLink = (): void =>{
-        if ((props.target===undefined) ||(props.target!=="")) return;
-        console.log(props.target);
-       linkFace.value?.classList.add( "selectedLink" );
-        window.location.href = props.target;
+    const doOpenLink = (): void =>{
+      if ( (!props.openLink)||(props.target===undefined) ||(props.target!=="")) return;
+      console.log(props.target);
+      linkFace.value?.classList.add( "selectedLink" );
+      window.location.href = props.target;
     }
 
     const getback=()=>{
