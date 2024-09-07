@@ -147,7 +147,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
             // visible cell
             cell.style.opacity = '1';
             var cellAngle = theta * i;
-            console.log(`Angle is ${cellAngle} for Item ${props.items[i]}`)
+            //console.log(`Angle is ${cellAngle} for Item ${props.items[i]}`)
             cell.style.transform = `${rotateFn}(${cellAngle}deg) translateZ(${radius}px)`;
         } else {
             // hidden cell
@@ -161,10 +161,10 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
     const rotateCarousel= ()=>{
         var angle = theta * selectedIndex * -1;
         comp.style.transform = `translateZ(${-radius}px) ${rotateFn}(${angle}deg)`;
-        console.log(`Angle is ${angle} Rotate Function ${rotateFn}`)
+        //console.log(`Angle is ${angle} Rotate Function ${rotateFn}`)
         setTimeout(() => {
             let activeItemIndex = selectedIndex%cellCount===0?1:selectedIndex<0?1+cellCount-Math.abs(selectedIndex)%cellCount:selectedIndex%cellCount+1;
-            console.log(`Selected Index ${selectedIndex} division over count from ${cellCount} :: ${activeItemIndex}`);
+            //console.log(`Selected Index ${selectedIndex} division over count from ${cellCount} :: ${activeItemIndex}`);
             console.log(`Visible Item Slot is ${props.items[activeItemIndex-1]}`);
             if (props.items[activeItemIndex-1]!==undefined)
                 emits("selected",props.items[activeItemIndex-1]);
