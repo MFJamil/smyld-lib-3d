@@ -88,6 +88,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
       }    
 
    });
+   const emits = defineEmits(['selected'])
    const touchStart=(e:any)=>{
        //console.log("Touch Start detected ....");
         const firstTouch = e.touches[0];                                      
@@ -146,7 +147,8 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
             // visible cell
             cell.style.opacity = '1';
             var cellAngle = theta * i;
-            cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px)';
+            console.log(`Angle is ${cellAngle} for Item ${props.items[i]}`)
+            cell.style.transform = `${rotateFn}(${cellAngle}deg) translateZ(${radius}px)`;
         } else {
             // hidden cell
             cell.style.opacity = '0';
@@ -158,8 +160,16 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
 
     const rotateCarousel= ()=>{
         var angle = theta * selectedIndex * -1;
-        comp.style.transform = 'translateZ(' + -radius + 'px) ' + 
-        rotateFn + '(' + angle + 'deg)';
+        comp.style.transform = `translateZ(${-radius}px) ${rotateFn}(${angle}deg)`;
+        console.log(`Angle is ${angle} Rotate Function ${rotateFn}`)
+        setTimeout(() => {
+            let activeItemIndex = selectedIndex%cellCount===0?1:selectedIndex<0?1+cellCount-Math.abs(selectedIndex)%cellCount:selectedIndex%cellCount+1;
+            console.log(`Selected Index ${selectedIndex} division over count from ${cellCount} :: ${activeItemIndex}`);
+            console.log(`Visible Item Slot is ${props.items[activeItemIndex-1]}`);
+            if (props.items[activeItemIndex-1]!==undefined)
+                emits("selected",props.items[activeItemIndex-1]);
+            //cells.forEach((curCell) => console.dir(curCell.offsetLeft));
+        }, 1000);
     }
 
     onMounted(()=>{
@@ -193,7 +203,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
  <style scoped>
  
 .scene {
-  border: 1px solid #CCC;
+  /*border: 1px solid #CCC;*/
   margin: 40px 0;
   position: relative;
   width: 210px;

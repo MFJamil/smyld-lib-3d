@@ -8,7 +8,7 @@
     </template>
   </Box>
   <div style="width:100%; display: flex; justify-content: center;">
-    <Qube settings="width:80;" show="top" open-link="false">
+    <Qube settings="width:80;" show="top" :open-link="false">
     <template #front>
       <p class="text-2xl text-blue-950 font-extralight py-14">Teto</p> 
     </template>
@@ -20,12 +20,15 @@
     </template>
 
   </Qube>
-  <Carousel :images="images" :items="['one','two','three','Four']">
+  <Carousel :images="images" :items="['one','two','three','four','five']">
     <template #one>
-      <span class="text-sm">This is me</span>
+      <div onclick="console.log('Item one clicked')">1</div>
+      
     </template>
     <template #two>2</template>
     <template #three>3</template>
+    <template #four>4</template>
+    <template #five>5</template>
     
 
   </Carousel>
@@ -36,7 +39,7 @@
 <script setup>
 import Box from './components/Box.vue'
 import Qube from './components/Qube.vue'
-import Carousel from './labs/Carousel_3d.vue'
+import Carousel from './components/Carousel.vue'
 const images = [
         {
             name: 'pic1',
