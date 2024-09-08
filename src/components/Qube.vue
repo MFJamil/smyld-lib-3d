@@ -12,14 +12,14 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTH
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -->
 <template>
-    <div class="scene" v-bind="$attrs"  @mousedown="doOpenLink()" >
-        <div ref="mainqube" class="qube" @mouseover="doMove" @mouseout="getback"  @touchstart="doMove" @touchend="getback">
-            <div class="qube__face qube__face--front"><slot name="front"></slot></div>
-            <div class="qube__face qube__face--back"><slot name="back"></slot></div>
-            <div  ref="linkFace" class="qube__face qube__face--right"><slot name="right"></slot></div>
-            <div class="qube__face qube__face--left"><slot name="left"></slot></div>
-            <div class="qube__face qube__face--top"><slot name="top"></slot></div>
-            <div class="qube__face qube__face--bottom"><slot name="bottom"></slot></div>
+    <div class="scene" v-bind="$attrs"  @mousedown="doOpenLink()" @mouseleave="getback">
+        <div ref="mainqube" class="qube"  @touchstart="doMove" @touchend="getback">
+            <div class="qube__face qube__face--front" @mouseover="doMove"><slot name="front"></slot></div>
+            <div class="qube__face qube__face--back"  ><slot name="back"></slot></div>
+            <div  ref="linkFace" class="qube__face qube__face--right"  ><slot name="right"></slot></div>
+            <div class="qube__face qube__face--left" ><slot name="left" ></slot></div>
+            <div class="qube__face qube__face--top" ><slot name="top" ></slot></div>
+            <div class="qube__face qube__face--bottom" ><slot name="bottom" ></slot></div>
         </div>
     </div>
 </template>
@@ -55,6 +55,7 @@ import { onMounted, ref } from 'vue';
   const linkFace = ref<HTMLElement>();
 
   const sets: string[] = ['width','height','length'];
+  
   const doMove = () =>{
     updatequbeClass(props.show);
   }
@@ -112,7 +113,8 @@ import { onMounted, ref } from 'vue';
     }
 
     const updatequbeClass= (newFace: string) =>{
-        //console.log(target);
+        console.log("Update with face  ..... " + newFace);
+        if(curFace.value === newFace) return;
         if ( curFace.value ) {
             mainqube.value?.classList.remove( "show-" + curFace.value );
         }

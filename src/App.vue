@@ -7,13 +7,13 @@
       <p>Hello.....</p> 
     </template>
   </Box>
-  <div style="width:100%; display: flex; justify-content: center;">
-    <Qube settings="width:80;" show="top" :open-link="false">
+  <div style="width:100%; display: flex; justify-content: center;left:150px;position: relative;">
+    <Qube settings="width:80;left:100px;" show="right" :open-link="false">
     <template #front>
       <p class="text-2xl text-blue-950 font-extralight py-14">Teto</p> 
     </template>
     <template #right>
-      <p class="text-2xl text-white font-extralight py-14">I am Right ></p> 
+      <p class="text-2xl text-white font-extralight py-14 border-2">I am Right ></p> 
     </template>
     <template #left>
       <p class="text-2xl text-white font-extralight py-14">Left Here ></p> 
