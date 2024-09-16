@@ -25,7 +25,7 @@
     @click:backward="console.log('Backward clicked ')"
     @click:horizontal="console.log('Switch to Horizontal ')"
     @click:vertical="console.log('Switch to vertical ')"
-
+    @selected="console.log('New Face is selected')"
   
   
   >
