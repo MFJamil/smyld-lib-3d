@@ -11,6 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/MFJamil/smyld-lib-3d.git"
   },
+  "author": {
+    "name": "M Jamil",
+    "email": "info@mj-consultant.de",
+    "url": "http://www.mj-consultant.de"
+  },
+  "license": "(MIT OR Apache-2.0)",
   "type": "module",
   "scripts": {
     "dev": "vite",
