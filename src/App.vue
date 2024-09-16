@@ -20,7 +20,15 @@
     </template>
 
   </Qube>
-  <Carousel :images="images" :items="['one','two','three','four','five']">
+  <Carousel :images="images" :items="['one','two','three','four','five']" 
+    @click:forward="console.log('forward clicked ')"
+    @click:backward="console.log('Backward clicked ')"
+    @click:horizontal="console.log('Switch to Horizontal ')"
+    @click:vertical="console.log('Switch to vertical ')"
+
+  
+  
+  >
     <template #one>
       <div onclick="console.log('Item one clicked')">1</div>
       

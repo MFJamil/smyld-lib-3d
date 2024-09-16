@@ -88,7 +88,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
       }    
 
    });
-   const emits = defineEmits(['selected'])
+   const emits = defineEmits(['selected','click:forward','click:backward','click:vertical','click:horizontal'])
    const touchStart=(e:any)=>{
        //console.log("Touch Start detected ....");
         const firstTouch = e.touches[0];                                      
@@ -186,6 +186,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
     }
     const onOrientationChange=(horizontalDirection=true) => {
     //Code below to be updated via a special control
+        emits(horizontalDirection?'click:horizontal':'click:vertical',true);
         horizontalIcon.value = horizontalDirection?'mdi-swap-vertical-bold':'mdi-swap-horizontal-bold';
         isHorizontal.value = horizontalDirection;
         rotateFn = isHorizontal.value ? 'rotateY' : 'rotateX';
@@ -193,6 +194,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
     }
 
     const move=(forward:boolean)=>{
+      emits(forward?'click:forward':'click:backward',true);
       selectedIndex = selectedIndex + (forward?1:-1);       
       changeCarousel();
    }
